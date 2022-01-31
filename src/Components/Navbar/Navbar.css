@@ -1,0 +1,53 @@
+header {
+  height: auto;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	z-index: 1;
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding:0 30px ;
+}
+
+header nav>a {
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+}
+
+header nav h1 {
+  color: #000;
+  padding: 0.5em;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+}
+
+header nav ul {
+  list-style: none;
+  position: relative;
+  padding: 0.3em;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li a {
+  margin: 0 5px 5px;
+  padding-left: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  font-weight: 650;
+  color: #000;
+  padding: 5px;
+  position: relative;
+  transition: all 0.1ms 150ms;
+  text-transform: uppercase;
+}

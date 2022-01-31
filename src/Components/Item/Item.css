@@ -1,0 +1,24 @@
+.product {
+    margin: 10px;
+    width: 550px;
+}
+
+.product img {
+    width:100%; 
+    height: auto;
+}
+
+.product ul {
+    list-style: none;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 10px;
+}
+
+.product ul li {
+    font-weight: 500;
+}
+
+.product ul li h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
