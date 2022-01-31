@@ -1,4 +1,5 @@
 import HomePage from "./Pages/HomePage.js";
+import NotFoundPage from "./Pages/NotFoundPage.js";
 import ProductsPage from "./Pages/ProductsPage.js";
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import "./App.css";
@@ -18,6 +19,7 @@ function App() {
 					<Route path=":id" element={<ItemDetailContainer/>}/>
 				</Route>
 			</Route>
+			<Route path="*" element={<NotFoundPage/>}/>
 		</Routes>
     </BrowserRouter>
   )

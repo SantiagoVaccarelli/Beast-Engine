@@ -1,0 +1,66 @@
+.itemDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.item ul {
+    list-style: none;
+    align-self: center;
+}
+
+
+.item > * {
+    margin: 20px;
+}
+
+.itemButtons {
+    display: flex;
+    justify-self: center;
+    width: 70%;
+}
+
+.itemButtons a {
+    text-decoration: none;
+    position: relative;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    color: black;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    background: transparent;
+    margin: 15px;
+}
+
+.itemButtons a:hover::after {
+    transform: translate(5px,5px);
+}
+
+.itemButtons a:hover::before {
+    transform: translate(-5px,-5px);
+}
+
+.itemButtons a::after, .itemButtons a::before {
+    border: 2px solid black;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: transform 0.3s ease;
+}

@@ -1,21 +1,26 @@
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import './ItemDetail.css'
 
 const ItemDetail = ({item})=>{
     console.log(item);
     return(
-        <div className='product'>
-        <Link to={`/${item.id}`}>
-            <img src={require(`../../Assets/Images/${item.brand.toLowerCase()}-${item.model.toLowerCase()}.jpeg`)} alt=''/>
-        </Link>
+        <div className='itemDetail'>
+            <div className='itemContainer'>
+                <div className='item'>
+                    <img src={require(`../../Assets/Images/${item.brand.toLowerCase()}-${item.model.toLowerCase()}.jpeg`)} alt=''/>
 
-        <ul>
-            <li><h1>{item.brand} {item.model}</h1></li>
-            <li><FontAwesomeIcon icon={faAngleRight}/>${item.price}</li>
-            <li><FontAwesomeIcon icon={faAngleRight}/> {item.distance} km</li>
-        </ul>
-    </div>
+                    <ul>
+                        <li><h1>{item.brand} {item.model}</h1></li>
+                        <li>${item.price}</li>
+                        <li>{item.distance} km</li>
+                    </ul>
+                </div>
+                <div className='itemButtons'>
+                    <Link to={`/products`}><p>Volver</p></Link>
+                    <Link to={`/`}><p>Agregar al carrito</p></Link>
+                </div>
+            </div>
+        </div>
     )
 }
 
