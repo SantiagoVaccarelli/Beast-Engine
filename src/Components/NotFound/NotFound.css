@@ -1,37 +1,18 @@
-.itemDetail {
+.notFoundContainer {
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-}
-
-.itemContainer {
-    display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
-.item {
-    display: flex;
-    justify-content: center;
-}
-
-.item ul {
-    list-style: none;
-    align-self: center;
+.notFoundContainer > * {
+    margin: 40px;
 }
 
 
-.item > * {
-    margin: 20px;
-}
-
-.itemButtons {
-    display: flex;
-    justify-self: center;
-    width: 70%;
-}
-
-.itemButtons a {
+.notFoundContainer a {
     text-decoration: none;
     position: relative;
     padding: 1rem 3rem;
@@ -45,15 +26,15 @@
     margin: 15px;
 }
 
-.itemButtons a:hover::after {
+.notFoundContainer a:hover::after {
     transform: translate(5px,5px);
 }
 
-.itemButtons a:hover::before {
+.notFoundContainer a:hover::before {
     transform: translate(-5px,-5px);
 }
 
-.itemButtons a::after, .itemButtons a::before {
+.notFoundContainer a::after, .notFoundContainer a::before {
     border: 2px solid black;
     position: absolute;
     content: '';

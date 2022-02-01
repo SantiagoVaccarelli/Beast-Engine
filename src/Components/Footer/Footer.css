@@ -1,0 +1,70 @@
+footer {
+    height: 6vh;
+    color: black;
+    background-color: white;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	flex-direction: column;
+	margin-top: 25px;
+}
+
+.footerContainer {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	width: 100%;
+}
+
+.footerContainer p {
+    margin-bottom: 0;
+}
+
+.footerContainer .copyright {
+    display: flex;
+    align-items: center;
+}
+
+.footerContainer .copyright p {
+    padding: 15px;
+}
+
+.footerContainer .redes {
+    list-style: none;
+    display: flex;
+}
+
+.footerContainer .redes li {
+    padding: 0 25px;
+}
+
+.footerContainer .redes li + li {
+    border-left: black solid 2px;
+}
+
+.footerContainer .redes li a {
+    color: black;
+    transition: color 0.4s;
+}
+
+.footerContainer .redes li a:hover {
+    color: black;
+}
+
+.footerContainer .redes li a .fab {
+    font-size: 20px;
+    transition: font-weight 0.2s;
+}
+
+.footerContainer .redes li a .fab:hover {
+    font-weight: 500;
+}
+
+footer::before {
+  content: '';
+  background-color: black;
+  width: 500px;
+  height: 2px;
+  display: block;
+}
