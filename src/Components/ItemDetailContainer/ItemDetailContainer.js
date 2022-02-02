@@ -6,7 +6,7 @@ const ItemDetailContainer = () => {
 
     const {id} = useParams();
     const item = products.find(prod => prod.id === Number(id));
-    console.log(item);
+
     return(
         <div>
             <ItemDetail item={item}/>

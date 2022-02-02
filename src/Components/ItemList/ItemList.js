@@ -2,6 +2,13 @@ import Item from '../Item/Item'
 import './ItemList.css'
 
 const ItemList = ({products}) => {
+
+    let models = ['Yaris', 'Compass'];
+    let brands = ['Ford'];
+
+    products = products.filter(a=>models.includes(a.model) || brands.includes(a.brand));
+    
+
     return (
         <div className='catalog' id='catalog'>
             {

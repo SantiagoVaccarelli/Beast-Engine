@@ -5,7 +5,7 @@ import ProductsPage from './Pages/ProductsPage.js';
 import NotFoundPage from './Pages/NotFoundPage.js';
 import Footer from './Components/Footer/Footer.js';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer.js';
+import ItemDetailPage from './Pages/ItemDetailPage';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
 				<Route path='products'>
 					<Route index element={<ProductsPage/>}/>
-					<Route path=':id' element={<ItemDetailContainer/>}/>
+					<Route path=':id' element={<ItemDetailPage/>}/>
 				</Route>
 			</Route>
 			<Route path='*' element={<NotFoundPage/>}/>

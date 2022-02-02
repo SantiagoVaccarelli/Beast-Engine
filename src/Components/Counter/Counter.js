@@ -7,30 +7,22 @@ const Counter = () => {
     return (
         <div className="contador">
             <div>
-                <button onClick = {()=>{
+                <button className='buttonsLight' onClick = {()=>{
                 contadorFuncion(contadorValue-1);
                 }}>
-                Decrementar
+                -
                 </button>
 
                 <span>{contadorValue}</span>
                 
-                <button onClick = {()=>{
+                <button className='buttonsLight' onClick = {()=>{
                     contadorFuncion(contadorValue+1);
                 }}>
-                Incrementar
+                +
                 </button>
             </div>
-            <button onClick = {()=>{
-                contadorFuncion(0);
-            }}>
-            Reiniciar
-            </button>
-
         </div>    
     )
 }
-
-
 
 export default Counter;

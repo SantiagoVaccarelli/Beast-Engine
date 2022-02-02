@@ -16,9 +16,11 @@
 
 .product ul li {
     font-weight: 500;
+    font-family: 'Oswald', sans-serif;
 }
 
 .product ul li h1 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    
 }

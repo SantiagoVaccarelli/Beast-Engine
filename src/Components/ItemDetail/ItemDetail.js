@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import './ItemDetail.css'
+import Counter from '../Counter/Counter'
 
 const ItemDetail = ({item})=>{
-    console.log(item);
+
+    
     return(
         <div className='itemDetail'>
             <div className='itemContainer'>
@@ -16,8 +18,9 @@ const ItemDetail = ({item})=>{
                     </ul>
                 </div>
                 <div className='itemButtons'>
-                    <Link to={`/products`}><p>Volver</p></Link>
-                    <Link to={`/`}><p>Agregar al carrito</p></Link>
+                    <Link to={`/products`} className='buttonsLight'><p>Volver</p></Link>
+                    <Link to={`/cart`} className='buttonsLight'><p>Agregar al carrito</p></Link>
+                    <Counter/>
                 </div>
             </div>
         </div>

@@ -3,6 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 100px 50px 0px 450px;
+    padding: 130px 50px 0px 450px;
     min-height: 100vh;
 }
