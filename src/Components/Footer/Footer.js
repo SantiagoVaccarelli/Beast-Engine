@@ -7,12 +7,12 @@ const Footer = () => {
     return(
         <footer>
             <div className="footerContainer">
-                <div class="copyright">
+                <div className="copyright">
                     <FontAwesomeIcon icon={faCopyright}/>
-                    <p class="copyrightItem">2021 Beast Engine</p>
+                    <p className="copyrightItem">2021 Beast Engine</p>
                 </div>
                 
-                <p class="textoFooter"> The Best Car Shop</p>
+                <p className="textoFooter"> The Best Car Shop</p>
                 
                 <ul className='redes'> 
                     <li><a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook}/></a></li>

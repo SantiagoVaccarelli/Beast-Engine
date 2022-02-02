@@ -1,10 +1,16 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ItemDetail.css'
 import Counter from '../Counter/Counter'
 
-const ItemDetail = ({item})=>{
+const ItemDetail = ({item}) =>{
 
-    
+    const navigate = useNavigate();
+
+    const onAdd = (contador) => {
+        item.qty = contador;
+        console.log(`El producto fue añadido al carrito correctamente (cantidad ${contador})`)
+    }
+
     return(
         <div className='itemDetail'>
             <div className='itemContainer'>
@@ -18,9 +24,8 @@ const ItemDetail = ({item})=>{
                     </ul>
                 </div>
                 <div className='itemButtons'>
-                    <Link to={`/products`} className='buttonsLight'><p>Volver</p></Link>
-                    <Link to={`/cart`} className='buttonsLight'><p>Agregar al carrito</p></Link>
-                    <Counter/>
+                    <button onClick={() => navigate(-1)} className='buttonsLight'><p>Volver</p></button>
+                    <Counter onAdd={onAdd}/>
                 </div>
             </div>
         </div>

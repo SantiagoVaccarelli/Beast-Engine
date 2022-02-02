@@ -1,14 +1,17 @@
 import "./Counter.css";
 import {useState} from "react";
+import { Link } from 'react-router-dom';
 
 
-const Counter = () => {
-    let [contadorValue,contadorFuncion] = useState(0);
+const Counter = ({onAdd}) => {
+    
+    let [contadorValue,contadorFuncion] = useState(1);
+
     return (
         <div className="contador">
             <div>
                 <button className='buttonsLight' onClick = {()=>{
-                contadorFuncion(contadorValue-1);
+                    contadorValue?contadorFuncion(contadorValue-1):contadorFuncion(contadorValue);
                 }}>
                 -
                 </button>
@@ -21,6 +24,7 @@ const Counter = () => {
                 +
                 </button>
             </div>
+            <Link to={`/cart`} className='buttonsLight'  onClick={()=>onAdd(contadorValue)}><p>Agregar al carrito</p></Link>
         </div>    
     )
 }
