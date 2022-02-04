@@ -10,15 +10,26 @@ const ItemListContainer = () => {
 
     const getProducts = () => {
         return new Promise((resolve) => {
-            setTimeout(() => {resolve(products)}, 1 /*2000*/);  
+            setTimeout(() => {resolve(products)}, 2000);  
         });
     };
 
     useEffect(()=>{
-        getProducts().then((r)=>setProducts(r))
-    },[]);
+        getProducts().then((r)=>setProducts(r));
+    }, []);
 
-    return (<ItemList products={productsS}/>)
+
+    const filtrar = () => {
+        setProducts(products.filter((i)=> i.model==="Fiesta"))
+    } 
+
+    
+    return (
+        <div>
+            <ItemList products={productsS}/>
+            <button onClick={()=>filtrar()}>FILTRO</button>
+        </div>
+    )
 }
 
 export default ItemListContainer;
