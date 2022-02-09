@@ -2,28 +2,37 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 import {useEffect, useState} from 'react'
 import { getFirestore } from '../../Firebase';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState();
+    const { categoryId } = useParams();
     
-    useEffect( ()=>{ 
+    useEffect(() => {
         const db = getFirestore();
-        const productsCollection = db.collection('products');
-        const getDataFromFirestore =  async ()=>{
-            try {
-                const response = await productsCollection.get();
-                setItems(response.docs.map((doc)=>({...doc.data(), id:doc.id})));
-                console.log(items);
-            }
-
-            finally { setLoading(false); };
+        let productsCollection;
+        if (categoryId) {
+          productsCollection = db
+            .collection("productos")
+            .where("categoryId", "==", Number(categoryId));
+        } else {
+          productsCollection = db.collection("products");
         }
+    
+        const getDataFromFirestore = async () => {
+          setLoading(true);
+          try {
+            const response = await productsCollection.get();
+            if (response.empty) console.log("No hay productos");
+            setItems(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+          }  finally {
+            setLoading(false);
+          }
+        };
         getDataFromFirestore();
-    }, 
-    [items]);
-       
+      }, [categoryId]);
 
     if (loading) return <div className='cargando'> <p>Cargando...</p></div>;
     
