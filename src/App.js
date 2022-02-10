@@ -22,6 +22,7 @@ function App() {
 					<Route path='products'>
 						<Route index element={<ProductsPage/>}/>
 						<Route path=':id' element={<ItemDetailPage/>}/>
+						<Route path="category/:categoryId" element={<ProductsPage/>} />
 					</Route>
 					
 					<Route path='cart' element={<CartPage/>}/>

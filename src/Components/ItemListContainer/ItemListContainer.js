@@ -15,8 +15,8 @@ const ItemListContainer = () => {
         let productsCollection;
         if (categoryId) {
           productsCollection = db
-            .collection("productos")
-            .where("categoryId", "==", Number(categoryId));
+            .collection("products")
+            .where("category", "==", categoryId);
         } else {
           productsCollection = db.collection("products");
         }

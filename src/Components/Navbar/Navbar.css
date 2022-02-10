@@ -9,6 +9,7 @@ header {
 	z-index: 1;
 	display: flex;
 	justify-content: space-between;
+  z-index: 999;
 }
 
 header nav {
@@ -31,7 +32,7 @@ header nav h1 {
   font-weight: 200;
   font-size: 1.6rem;
   font-family: 'Pacifico', cursive;
-  z-index: 999;
+
 }
 
 header nav ul {
