@@ -8,23 +8,16 @@ const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product, qty) => {
-        cart.some(item => item.product.id === product.id)? setCart((prevCart)=> prevCart.map((item) => item.product.id===product.id?{ 'product': product, 'qty': qty+item.product.qty }:product)).qty+=qty : setCart((prevCart)=> [...prevCart, { 'product': product, 'qty': qty }]);
+        cart.some(item => item.product.id === product.id)? setCart((prevCart)=> prevCart.map((item) => item.product.id===product.id?{ 'product': item.product, 'qty': qty+item.qty }:item)):setCart((prevCart)=> [...prevCart, { 'product': product, 'qty': qty }]);
     }
   
     const removeFromCart = (product) => {
-        product.qty = 0;
-        setCart(cart.filter(item => item.qty));
+        setCart(cart.filter(item => item.product.id !== product.product.id));
     };
     
     const clearCart = () => setCart([]);
 
-    const subTotal = (product) =>  product.price * product.quantity;
-
-    const productsQty = () => {
-        let qty = 0;
-        cart.forEach(item => qty += item.qty)
-        return qty
-    }
+    const subTotal = (item) => item.product.price * item.qty;
 
     const total = () => {
         let total = 0;
@@ -37,7 +30,6 @@ const CartProvider = ({ children }) => {
         addToCart: addToCart,
         removeFromCart:removeFromCart,
         clearCart:clearCart,
-        productsQty:productsQty,
         subTotal:subTotal,
         total:total
     }

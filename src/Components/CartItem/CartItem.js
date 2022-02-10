@@ -1,12 +1,12 @@
-
-function CartItem({item}){
+import './CartItem.css'
+function CartItem({item, subtotal}){
     return (
         <div className="cart-item"> 
             <img src={require(`../../Assets/Images/${item.product.brand.toLowerCase()}-${item.product.model.toLowerCase()}.jpeg`)} alt=''/>
             <div className="info-item">
-                <h4>{item.product.brand}</h4>
-                <h5>{item.product.model}</h5>
-                <div>{item.qty}</div>
+                <h4>{item.product.brand} {item.product.model}</h4>
+                <p>Cantidad: {item.qty}</p>
+                <p>Subtotal: ${subtotal}</p>
             </div>
         </div>
     );
