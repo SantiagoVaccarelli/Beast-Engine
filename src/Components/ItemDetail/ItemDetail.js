@@ -1,16 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import './ItemDetail.css'
 import Counter from '../Counter/Counter'
+import { useContext } from 'react';
+import { context } from '../../Context/CartContext';
 
 const ItemDetail = ({item}) =>{
 
     const navigate = useNavigate();
+    const { addToCart, removeFromCart, clearCart, subTotal, productsQty, Total} = useContext(context);   
+
 
     const onAdd = (contador) => {
-        item.qty = contador;
-        console.log(`El producto fue añadido al carrito correctamente (cantidad ${contador})`)
+        addToCart(item, contador);
     }
-
+    
     return(
         <div className='itemDetail'>
             <div className='itemContainer'>
@@ -25,7 +28,7 @@ const ItemDetail = ({item}) =>{
                 </div>
                 <div className='itemButtons'>
                     <button onClick={() => navigate(-1)} className='buttonsLight'><p>Volver</p></button>
-                    <Counter onAdd={onAdd}/>
+                    <Counter onAdd={onAdd} item={item}/>
                 </div>
             </div>
         </div>

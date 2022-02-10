@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 const Item = (item)=>{
-    console.log(item);
     return (
         <div className='product'>
             <Link to={`/products/${item.id}`}>

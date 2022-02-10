@@ -6,12 +6,14 @@ import NotFoundPage from './Pages/NotFoundPage.js';
 import Footer from './Components/Footer/Footer.js';
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import ItemDetailPage from './Pages/ItemDetailPage';
-//import { CartProvider } from "./context/CartContext";
+import CartPage from './Pages/CartPage';
+import CartProvider from './Context/CartContext';
+
 
 function App() {
   return (
-	//<CartProvider>
-		<BrowserRouter>
+	<BrowserRouter>
+		<CartProvider>
 			<Navbar/>
 			<Routes>
 				<Route path='/'>
@@ -21,12 +23,14 @@ function App() {
 						<Route index element={<ProductsPage/>}/>
 						<Route path=':id' element={<ItemDetailPage/>}/>
 					</Route>
+					
+					<Route path='cart' element={<CartPage/>}/>
 				</Route>
 				<Route path='*' element={<NotFoundPage/>}/>
 			</Routes>
 			<Footer/>
-		</BrowserRouter>
-	//</CartProvider>
+		</CartProvider>
+	</BrowserRouter>
   )
 }
 

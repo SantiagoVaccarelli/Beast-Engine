@@ -3,7 +3,7 @@ import {useState} from "react";
 import { Link } from 'react-router-dom';
 
 
-const Counter = ({onAdd}) => {
+const Counter = ({onAdd, item}) => {
     
     let [value, setValue] = useState(1);
 
