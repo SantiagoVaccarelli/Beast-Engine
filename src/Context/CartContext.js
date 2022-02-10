@@ -7,10 +7,14 @@ const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    const addToCart = (product, qty) =>
-        cart.some(item => item.product.id === product.id)? setCart((prevCart)=> prevCart.map((item)=> item.product.id===product.id? item.qty+=qty:item)) : setCart((prevCart)=> [...prevCart, { 'product': product, 'qty': qty }]);
-
-    const removeFromCart = (product) => setCart(cart.filter(item => item.product.id !== product.id));
+    const addToCart = (product, qty) => {
+        cart.some(item => item.product.id === product.id)? setCart((prevCart)=> prevCart.map((item) => item.product.id===product.id?{ 'product': product, 'qty': qty+item.product.qty }:product)).qty+=qty : setCart((prevCart)=> [...prevCart, { 'product': product, 'qty': qty }]);
+    }
+  
+    const removeFromCart = (product) => {
+        product.qty = 0;
+        setCart(cart.filter(item => item.qty));
+    };
     
     const clearCart = () => setCart([]);
 
@@ -24,7 +28,7 @@ const CartProvider = ({ children }) => {
 
     const total = () => {
         let total = 0;
-        cart.forEach(item => total+=item.qty*item.price);
+        cart.forEach(item => total+=item.qty*item.product.price);
         return total;
     }
 
