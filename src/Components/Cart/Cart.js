@@ -38,7 +38,7 @@ const Cart = () =>{
                             <h2>Tu carrito:</h2>
                             {cart.map((item) => {
                             return (
-                                <div key={item.product.id}>
+                                <div key={item.product.id} className="cart-item-container">
                                     <CartItem item={item} subtotal={subTotal(item)}/>
                                     
                                     <div onClick={()=>removeFromCart(item)}>
@@ -63,10 +63,16 @@ const Cart = () =>{
                             <h2>Introduzca sus datos:</h2>
 
                             <form onSubmit={handleSubmit}>
-                                <label htmlFor="name">Nombre: </label>
-                                <input type="text" name="name" id="name" value={name} placeholder="Ingrese su nombre" onChange={(e)=>setName(e.target.value)}/>
-                                <label htmlFor="phone">Telefono: </label>
-                                <input type="text" name="phone" id="phone" value={phone} placeholder="Ingrese su nombre" onChange={(e)=>setPhone(e.target.value)}/>
+                                <div className="form-box">
+                                    <label htmlFor="name">Nombre: </label>
+                                    <input type="text" name="name" id="name" value={name} placeholder="Ingrese su nombre" onChange={(e)=>setName(e.target.value)}/>
+                                </div>
+
+                                <div className="form-box">
+                                    <label htmlFor="phone">Telefono: </label>
+                                    <input type="text" name="phone" id="phone" value={phone} placeholder="Ingrese su nombre" onChange={(e)=>setPhone(e.target.value)}/>
+                                </div>
+                                
                                 <input type="submit" className='buttonsLight' value="Finalizar compra"/>
                             </form>
                         </div>

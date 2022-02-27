@@ -1,15 +1,32 @@
 .cart-overlay {
     min-height: 100vh;
-    padding-top: 100px;
+    padding-top: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .cart-overlay h2 {
-    padding: 16px;
+    padding: 18px 16px;
 }
 
 .cart-overlay h3 {
     padding: 16px;
+}
+
+.form-box {
+    margin: 15px;
+}
+
+input[type=submit] {
+    border: 2px black solid;
+}
+
+.cart-item-container::after, .cart-footer::after {
+    content: ' ';
+    width: 100%px;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: 16px;
 }
