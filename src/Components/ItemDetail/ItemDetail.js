@@ -7,7 +7,7 @@ import { context } from '../../Context/CartContext';
 const ItemDetail = ({item}) =>{
 
     const navigate = useNavigate();
-    const { addToCart, removeFromCart, clearCart, subTotal, productsQty, Total} = useContext(context);   
+    const { addToCart } = useContext(context);   
 
 
     const onAdd = (contador) => {

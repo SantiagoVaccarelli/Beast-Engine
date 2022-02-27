@@ -15,9 +15,9 @@ const Footer = () => {
                 <p className="textoFooter"> The Best Car Shop</p>
                 
                 <ul className='redes'> 
-                    <li><a href="https://www.facebook.com/"><FontAwesomeIcon icon={faFacebook}/></a></li>
-                    <li><a href="https://www.instagram.com/"><FontAwesomeIcon icon={faInstagram}/></a></li>
-                    <li><a href="https://twitter.com/"><FontAwesomeIcon icon={faTwitter}/></a></li>
+                    <li><a href="https://www.facebook.com/" rel="noreferrer" target='_blank'><FontAwesomeIcon icon={faFacebook}/></a></li>
+                    <li><a href="https://www.instagram.com/" rel="noreferrer" target='_blank'><FontAwesomeIcon icon={faInstagram}/></a></li>
+                    <li><a href="https://twitter.com/" rel="noreferrer" target='_blank'><FontAwesomeIcon icon={faTwitter}/></a></li>
                 </ul>
             </div>
         </footer>
