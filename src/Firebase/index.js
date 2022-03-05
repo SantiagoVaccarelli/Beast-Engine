@@ -11,15 +11,6 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID
 };
 
-// CREDENCIALES INCLUIDAS EN EL .env:
-// REACT_APP_API_KEY= AIzaSyAwY4wlwD4cQpB6WhN0v_GwGsiQaI0jW-Q 
-// REACT_APP_AUTH_DOMAIN= beast-engine.firebaseapp.com 
-// REACT_APP_PROJECT_ID= beast-engine 
-// REACT_APP_STORAGE_BUCKET= beast-engine.appspot.com 
-// REACT_APP_MESSAGING_SENDER_ID= 36729925654 
-// REACT_APP_APP_ID= 1:36729925654:web:6c0961335b4b626950c537 
-
-
 const app = firebase.initializeApp(firebaseConfig);
 
 export const getFirebase = () => app;
