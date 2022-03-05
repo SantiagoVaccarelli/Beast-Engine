@@ -4,9 +4,6 @@ import {useEffect, useState} from 'react'
 import { getFirestore } from '../../Firebase';
 import { useParams } from 'react-router-dom';
 
-// Desafio Firebase 2 
-//import { Products } from '../../Assets/products';
-
 const ItemListContainer = () => {
 
     const [items, setItems] = useState([]);
@@ -23,13 +20,6 @@ const ItemListContainer = () => {
         } else {
           productsCollection = db.collection("products");
         }
-
-
-      // Desafio Firebase 2 
-      // const addProductToFirebase = ()=>{
-      //   productsCollection = db.collection("productos");
-      //   Products.forEach((prod)=>productsCollection.add(prod));
-      // }
         
         const getDataFromFirestore = async () => {
           setLoading(true);
@@ -42,9 +32,6 @@ const ItemListContainer = () => {
           }
         };
         getDataFromFirestore();
-
-        //Desafio Firebase 2 (descomentar para probarlo)
-        //addProductToFirebase();
 
       }, [categoryId]);
 
