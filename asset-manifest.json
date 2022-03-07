@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/SantiagoVaccarelli.github.io/static/css/main.e1064aa8.css",
-    "main.js": "/SantiagoVaccarelli.github.io/static/js/main.d8a31b10.js",
+    "main.js": "/SantiagoVaccarelli.github.io/static/js/main.b5963fae.js",
     "static/js/787.cfd8f164.chunk.js": "/SantiagoVaccarelli.github.io/static/js/787.cfd8f164.chunk.js",
     "static/media/fondoInicio.jpg": "/SantiagoVaccarelli.github.io/static/media/fondoInicio.f6b2da4e2ec3c79b1c04.jpg",
     "static/media/ford-ranger.jpeg": "/SantiagoVaccarelli.github.io/static/media/ford-ranger.570df86c4c296c0cbb88.jpeg",
@@ -23,11 +23,11 @@
     "static/media/toyota-corolla.jpeg": "/SantiagoVaccarelli.github.io/static/media/toyota-corolla.74f6e1273d90a68c2bc1.jpeg",
     "index.html": "/SantiagoVaccarelli.github.io/index.html",
     "main.e1064aa8.css.map": "/SantiagoVaccarelli.github.io/static/css/main.e1064aa8.css.map",
-    "main.d8a31b10.js.map": "/SantiagoVaccarelli.github.io/static/js/main.d8a31b10.js.map",
+    "main.b5963fae.js.map": "/SantiagoVaccarelli.github.io/static/js/main.b5963fae.js.map",
     "787.cfd8f164.chunk.js.map": "/SantiagoVaccarelli.github.io/static/js/787.cfd8f164.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1064aa8.css",
-    "static/js/main.d8a31b10.js"
+    "static/js/main.b5963fae.js"
   ]
 }
